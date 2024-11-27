@@ -1,0 +1,10 @@
+openai
+python-dotenv
+langchain
+langsmith
+pydantic
+docarray
+wikipedia
+openapi-schema-pydantic
+panel
+param
