@@ -9,8 +9,10 @@
   * 5
 * Build-database-agents
   * 27
-
+* Langchain
+  * 07
+    
 https://github.com/elephantscale/OpenAI-labs/tree/neha/35_LLM_With_Symantic_Search
 Rename, bring into main branch, copy to lab
-https://github.com/elephantscale/OpenAI-labs/tree/neha/07-langchain
+ 
 https://github.com/elephantscale/OpenAI-labs/tree/neha/36-Functions-Tool-Agents-Langchain
