@@ -8,7 +8,7 @@
 * Prompt-Engineering
   * 5
 * Build-database-agents
-  * 49
+  * 27
 
 https://github.com/elephantscale/OpenAI-labs/tree/neha/35_LLM_With_Symantic_Search
 Rename, bring into main branch, copy to lab
