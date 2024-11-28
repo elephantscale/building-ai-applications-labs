@@ -6,13 +6,13 @@
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
      ```sh
-     python3 -m venv Prompt_engineering
+     python3 -m venv myenv
      ```
 
 3. **Activate the Virtual Environment**
    - Activate the new virtual environment using:
      ```sh
-     source Prompt_engineering/bin/activate
+     source myenv/bin/activate
      ```
 
 4. **Install Jupyter Notebook**
@@ -30,11 +30,11 @@
 6. **Add Environment to Jupyter Kernel**
    - Add the current environment to the Jupyter kernel:
      ```sh
-     python3 -m ipykernel install --user --name=Prompt_engineering --display-name "Prompt_engineering"
+     python3 -m ipykernel install --user --name=myenv --display-name "myenv"
      ```
 
 7. **Install Lab Requirements**
-   - Install the lab requirements specified in the `requirements.txte file:
+   - Install the lab requirements specified in the `requirements.txt` file:
      ```sh
      pip3 install -r requirements.txt
      ```
