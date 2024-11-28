@@ -5,7 +5,7 @@
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
      ```sh
-     python3 -m venv myenv
+     python -m venv myenv
      ```
 
 3. **Activate the Virtual Environment**
