@@ -1,12 +1,11 @@
 ## Setup Local Environment for Prompt-engineering
 
 1. **Navigate to the Project Directory**
-   - Go inside the `Prompt-engineering` folder.
 
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
      ```sh
-     python3 -m venv myenv
+     python -m venv myenv
      ```
 
 3. **Activate the Virtual Environment**
@@ -18,28 +17,16 @@
 4. **Install Jupyter Notebook**
    - Install Jupyter Notebook in the same virtual environment:
      ```sh
-     pip3 install jupyter
+     pip install jupyter
      ```
 
-5. **Install IPython Kernel**
-   - Install `ipykernel` to attach the Jupyter environment to the same kernel:
-     ```sh
-     pip3 install ipykernel
-     ```
-
-6. **Add Environment to Jupyter Kernel**
-   - Add the current environment to the Jupyter kernel:
-     ```sh
-     python3 -m ipykernel install --user --name=myenv --display-name "myenv"
-     ```
-
-7. **Install Lab Requirements**
+5. **Install Lab Requirements**
    - Install the lab requirements specified in the `requirements.txt` file:
      ```sh
-     pip3 install -r requirements.txt
+     pip install -r requirements.txt
      ```
 
-8. **Create .env File for API Keys**
+6. **Create .env File for API Keys**
     ```sh
      LLM_MODEL=gpt-4o
      OPENAI_API_KEY=
@@ -51,15 +38,4 @@
      jupyter lab
      ```
 
-10. **Select the Correct Kernel**
-    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Prompt_engineering".
 
-11. **Verify the Environment**
-    - To verify that you are in the correct environment, create a new cell and run the following command. If the output shows your current environment, you are all set:
-      ```python
-      import sys
-      print(sys.executable)
-      ```
-
-12. **Run the Labs**
-    - You are now ready to run any lab in Jupyter lab.
