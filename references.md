@@ -11,8 +11,7 @@
   * 27
 * Langchain
   * 07
-    
-https://github.com/elephantscale/OpenAI-labs/tree/neha/35_LLM_With_Symantic_Search
-Rename, bring into main branch, copy to lab
- 
-https://github.com/elephantscale/OpenAI-labs/tree/neha/36-Functions-Tool-Agents-Langchain
+* LLM With Semantic Search
+  * 35    
+* Functions Tool Agents Langchain
+  * 36
