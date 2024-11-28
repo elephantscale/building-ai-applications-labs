@@ -9,7 +9,6 @@
   * 53
 * Agentic-on-Bedrock
   * 52
-
 * Langchain
   * 07
 * LLM With Semantic Search

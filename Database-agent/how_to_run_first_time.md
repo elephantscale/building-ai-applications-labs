@@ -13,20 +13,13 @@
      ```sh
      source myenv/bin/activate
      ```
-
-4. **Install Jupyter Notebook**
-   - Install Jupyter Notebook in the same virtual environment:
-     ```sh
-     pip install jupyter
-     ```
      
-5. **Install Lab Requirements**
+4. **Install Lab Requirements**
    - Install the lab requirements specified in the `requirements.txt` file:
      ```sh
-     pip3 install -r requirements.txt
+     pip install -r requirements.txt
      ```
-
-6. **Create .env File for API Keys**
+5. **Create .env File for API Keys**
    - Create a `.env` file for the keys and add the following values:
      ```sh
      OPENAI_API_VERSION=
@@ -34,6 +27,10 @@
      OPENAI_API_KEY=
      AZURE_ENDPOINT=
      ```
+6. Install jupyter
+    ```sh
+    pip install jupyter
+    ```
 
 7. **Start Jupyter Lab**
    - Start Jupyter UI with the command:
