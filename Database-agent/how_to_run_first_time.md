@@ -1,18 +1,18 @@
 ## Setup Local Environment for Lab 27 - Database Agent
 
 1. **Navigate to the Project Directory**
-   - Go inside the `27-database-agent` folder.
+   - Go inside the `database-agent` folder.
 
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
      ```sh
-     python3 -m venv 27
+     python3 -m venv Database_agent
      ```
 
 3. **Activate the Virtual Environment**
    - Activate the new virtual environment using:
      ```sh
-     source 27/bin/activate
+     source Database_agent/bin/activate
      ```
 
 4. **Install Jupyter Notebook**
@@ -30,7 +30,7 @@
 6. **Add Environment to Jupyter Kernel**
    - Add the current environment to the Jupyter kernel:
      ```sh
-     python3 -m ipykernel install --user --name=27 --display-name "Python (lab 27)"
+     python3 -m ipykernel install --user --name=27 --display-name "Database_agent"
      ```
 
 7. **Install Lab Requirements**
@@ -55,7 +55,7 @@
      ```
 
 10. **Select the Correct Kernel**
-    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Python (lab 27)".
+    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Database_agent".
 
 11. **Verify the Environment**
     - To verify that you are in the correct environment, create a new cell and run the following command. If the output shows your current environment, you are all set:

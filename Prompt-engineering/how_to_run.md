@@ -3,16 +3,16 @@ If the virtual environment already exits, follow the below steps to run the note
 1. **Activate the Virtual Environment**
    - Activate the new virtual environment using:
      ```sh
-     source Database_agent/bin/activate
+     source Prompt_engineering/bin/activate
      ```
      
 2. **Start Jupyter Notebook**
    - Start Jupyter Notebook with the command:
      ```sh
-     jupyter notebook         
+     jupyter lab         
      ```
 3. **Select the Correct Kernel**
-    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Python (lab 27)".
+    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Python (lab 50)".
 
 4. **Verify the Environment**
     - To verify that you are in the correct environment, create a new cell and run the following command. If the output shows your current environment, you are all set:

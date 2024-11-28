@@ -1,18 +1,18 @@
-## Setup Local Environment for Lab 35 - LLM with symantic search
+## Setup Local Environment for LLM with symantic search
 
 1. **Navigate to the Project Directory**
-   - Go inside the `35_LLM_With_Symantic_Search` folder.
+   - Go inside the `LLM_With_Semantic_Search` folder.
 
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
      ```sh
-     python3 -m venv 35
+     python3 -m venv LLM_With_Semantic_Search
      ```
 
 3. **Activate the Virtual Environment**
    - Activate the new virtual environment using:
      ```sh
-     source 35/bin/activate
+     source LLM_With_Semantic_Search/bin/activate
      ```
 
 4. **Install Jupyter Notebook**
@@ -30,7 +30,7 @@
 6. **Add Environment to Jupyter Kernel**
    - Add the current environment to the Jupyter kernel:
      ```sh
-     python3 -m ipykernel install --user --name=35 --display-name "Python (lab 35)"
+     python3 -m ipykernel install --user --name=LLM_With_Semantic_Search --display-name "LLM_With_Semantic_Search"
      ```
 
 7. **Install Lab Requirements**
@@ -53,7 +53,7 @@
      ```
 
 10. **Select the Correct Kernel**
-    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Python (lab 35)".
+    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "LLM_With_Semantic_Search".
 
 11. **Verify the Environment**
     - To verify that you are in the correct environment, create a new cell and run the following command. If the output shows your current environment, you are all set:

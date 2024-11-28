@@ -1,18 +1,18 @@
-## Setup Local Environment for Serverless-LLM-Bedrock
+## Setup Local Environment for Prompt-engineering
 
 1. **Navigate to the Project Directory**
-   - Go inside the `Serverless-LLM-Bedrock` folder.
+   - Go inside the `Prompt-engineering` folder.
 
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
      ```sh
-     python3 -m venv Serverless_LLM_Bedrock
+     python3 -m venv Prompt_engineering
      ```
 
 3. **Activate the Virtual Environment**
    - Activate the new virtual environment using:
      ```sh
-     source Serverless_LLM_Bedrock/bin/activate
+     source Prompt_engineering/bin/activate
      ```
 
 4. **Install Jupyter Notebook**
@@ -24,43 +24,42 @@
 5. **Install IPython Kernel**
    - Install `ipykernel` to attach the Jupyter environment to the same kernel:
      ```sh
-     pip3 install ipykernel 
+     pip3 install ipykernel
      ```
 
 6. **Add Environment to Jupyter Kernel**
    - Add the current environment to the Jupyter kernel:
      ```sh
-     python3 -m ipykernel install --user --name=Serverless_LLM_Bedrock --display-name "Serverless_LLM_Bedrock"
+     python3 -m ipykernel install --user --name=Prompt_engineering --display-name "Prompt_engineering"
      ```
 
 7. **Install Lab Requirements**
-   - Install the lab requirements specified in the `requirements.txt` file:
+   - Install the lab requirements specified in the `requirements.txte file:
      ```sh
      pip3 install -r requirements.txt
      ```
 
 8. **Create .env File for API Keys**
-    ```text
-     BucketName=<your-bucket-name>
+    ```sh
+     LLM_MODEL=gpt-4o
+     OPENAI_API_KEY=
      ```
 
-9. **Set up AWS access with the keys
-
-10. **Start Jupyter Notebook**
+9. **Start Jupyter Notebook**
    - Start Jupyter Notebook with the command:
      ```sh
      jupyter lab
      ```
 
-11. **Select the Correct Kernel**
-    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Serverless_LLM_Bedrock".
+10. **Select the Correct Kernel**
+    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Prompt_engineering".
 
-12. **Verify the Environment**
+11. **Verify the Environment**
     - To verify that you are in the correct environment, create a new cell and run the following command. If the output shows your current environment, you are all set:
       ```python
       import sys
       print(sys.executable)
       ```
 
-13. **Run the Labs**
+12. **Run the Labs**
     - You are now ready to run any lab in Jupyter lab.

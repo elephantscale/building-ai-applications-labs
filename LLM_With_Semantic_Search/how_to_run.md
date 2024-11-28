@@ -3,7 +3,7 @@ If the virtual environment already exits, follow the below steps to run the note
 1. **Activate the Virtual Environment**
    - Activate the new virtual environment using:
      ```sh
-     source 35/bin/activate
+     source LLM_With_Semantic_Search/bin/activate
      ```
      
 2. **Start Jupyter Notebook**
