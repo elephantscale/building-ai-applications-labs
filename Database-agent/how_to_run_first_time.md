@@ -1,45 +1,32 @@
-## Setup Local Environment for Lab 27 - Database Agent
+## Setup Local Environment 
 
 1. **Navigate to the Project Directory**
-   - Go inside the `database-agent` folder.
 
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
      ```sh
-     python3 -m venv Database_agent
+     python3 -m venv myenv
      ```
 
 3. **Activate the Virtual Environment**
    - Activate the new virtual environment using:
      ```sh
-     source Database_agent/bin/activate
+     source myenv/bin/activate
      ```
 
 4. **Install Jupyter Notebook**
    - Install Jupyter Notebook in the same virtual environment:
      ```sh
-     pip3 install jupyter
+     pip install jupyter
      ```
-
-5. **Install IPython Kernel**
-   - Install `ipykernel` to attach the Jupyter environment to the same kernel:
-     ```sh
-     pip3 install ipykernel
-     ```
-
-6. **Add Environment to Jupyter Kernel**
-   - Add the current environment to the Jupyter kernel:
-     ```sh
-     python3 -m ipykernel install --user --name=27 --display-name "Database_agent"
-     ```
-
-7. **Install Lab Requirements**
+     
+5. **Install Lab Requirements**
    - Install the lab requirements specified in the `requirements.txt` file:
      ```sh
      pip3 install -r requirements.txt
      ```
 
-8. **Create .env File for API Keys**
+6. **Create .env File for API Keys**
    - Create a `.env` file for the keys and add the following values:
      ```sh
      OPENAI_API_VERSION=
@@ -48,21 +35,10 @@
      AZURE_ENDPOINT=
      ```
 
-9. **Start Jupyter Notebook**
-   - Start Jupyter Notebook with the command:
+7. **Start Jupyter Lab**
+   - Start Jupyter UI with the command:
      ```sh
-     jupyter notebook or jupyter lab
+     jupyter lab
      ```
 
-10. **Select the Correct Kernel**
-    - At the top right corner of the Jupyter Notebook, click on the kernel and choose "Database_agent".
 
-11. **Verify the Environment**
-    - To verify that you are in the correct environment, create a new cell and run the following command. If the output shows your current environment, you are all set:
-      ```python
-      import sys
-      print(sys.executable)
-      ```
-
-12. **Run the Labs**
-    - You are now ready to run any lab in Jupyter Notebook.
