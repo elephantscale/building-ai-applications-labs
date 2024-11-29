@@ -15,3 +15,9 @@
   * 35    
 * Functions Tool Agents Langchain
   * 36
+
+
+TODO
+* In Database-agents
+  * Create Azure deployment under ES
+
