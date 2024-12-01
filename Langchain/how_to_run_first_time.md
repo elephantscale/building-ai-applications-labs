@@ -1,4 +1,4 @@
-## Setup Local Environment for Lab 07*
+## Setup Local Environment for Lab
 
 1. **Navigate to the Project Directory**
    - Go inside the `07-*` folder.
@@ -6,7 +6,7 @@
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
      ```sh
-     python3 -m venv 07
+     python -m venv 07
      ```
 
 3. **Activate the Virtual Environment**

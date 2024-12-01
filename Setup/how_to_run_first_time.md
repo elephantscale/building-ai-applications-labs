@@ -1,6 +1,7 @@
 ## Setup Local Environment 
 
-1. **Navigate to the Project Directory**
+1. **Navigate to the lab directory**
+*  **IMPORTANT:** Setup is done in each lab separately, but the instruction is the same.
 
 2. **Create a Virtual Environment**
    - Run the following command to create a virtual environment:
@@ -19,15 +20,10 @@
      ```sh
      pip install -r requirements.txt
      ```
-5. **Create .env File for API Keys**
-   - Create a `.env` file for the keys and add the following values:
-     ```sh
-     OPENAI_API_VERSION=
-     AZURE_DEPLOYMENT=
-     OPENAI_API_KEY=
-     AZURE_ENDPOINT=
-     ```
-6. Install jupyter
+5. **Create .env File for all API Keys**
+    - We use one .env file at the root of all labs
+   
+6. **Install jupyter**
     ```sh
     pip install jupyter
     ```
