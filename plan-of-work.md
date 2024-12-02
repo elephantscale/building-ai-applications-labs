@@ -1,7 +1,4 @@
 # Plan of work
-* Database Agent
-  * Lab 2024-12-01
-  * Slide
 
 * Agentic-on-Bedrock
   * Lab
@@ -27,7 +24,7 @@
   * Lab 2024-12-01
   * Slide
 
-Serverless-LLM-Bedrock
-* Lab
-* Slide
+* Serverless-LLM-Bedrock
+  * Lab
+  * Slide
 
