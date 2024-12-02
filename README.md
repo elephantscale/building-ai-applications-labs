@@ -1,2 +1,2 @@
-# building_ai_applications
+# building-ai-applications-lab
 For agencies and organizations
