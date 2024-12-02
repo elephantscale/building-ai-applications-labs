@@ -14,16 +14,28 @@
      ```sh
      source myenv/bin/activate
      ```
-     
-4. **Install Lab Requirements**
+
+4. **Install IPython Kernel**
+    - Install `ipykernel` to attach the Jupyter environment to the same kernel:
+      ```sh
+      pip install ipykernel 
+      ```
+
+5. **Add Environment to Jupyter Kernel**
+    - Add the current environment to the Jupyter kernel:
+      ```sh
+      python -m ipykernel install --user --name=myenv --display-name "My end"
+      ```
+
+6. **Install Lab Requirements**
    - Install the lab requirements specified in the `requirements.txt` file:
      ```sh
      pip install -r requirements.txt
      ```
-5. **Create .env File for all API Keys**
+7. **Create .env File for all API Keys**
     - We use one .env file at the root of all labs
    
-6. **Install jupyter**
+8. **Install jupyter**
     ```sh
     pip install jupyter
     ```
