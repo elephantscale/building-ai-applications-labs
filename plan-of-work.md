@@ -17,11 +17,11 @@
   * Slide
 
 * Langchain
-  * Lab 2024-12-01
+  * Lab 
   * Slide
 
 * Prompt-engineering
-  * Lab 2024-12-01
+  * Lab 2024-12-02
   * Slide
 
 * Serverless-LLM-Bedrock
