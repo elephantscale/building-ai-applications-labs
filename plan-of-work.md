@@ -10,6 +10,8 @@
 
 * Functions-Tool-Agents-Langchain
   * Lab
+     * Changed openai to ==0.28
+     * Still, errors in lab 2
   * Slide
 
 * LLM_With_Semantic_Search
