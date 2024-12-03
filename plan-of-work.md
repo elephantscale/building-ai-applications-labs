@@ -17,8 +17,8 @@
   * Slide
 
 * Langchain
-  * Lab 
-  * Slide
+  * Lab 2024-12-02
+  * Slide 
 
 * Prompt-engineering
   * Lab 2024-12-02
