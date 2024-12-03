@@ -1,10 +1,12 @@
-openai
+openai==0.28
 python-dotenv
 langchain
+langchain_community
 langsmith
 pydantic
 docarray
 wikipedia
 openapi-schema-pydantic
+tiktoken
 panel
 param
