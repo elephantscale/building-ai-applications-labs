@@ -27,6 +27,6 @@
   * Slide
 
 * Serverless-LLM-Bedrock
-  * Lab
+  * Lab 2024-12-02
   * Slide
 
