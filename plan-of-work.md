@@ -1,7 +1,7 @@
 # Plan of work
 
 * Agentic-on-Bedrock
-  * Lab
+  * Lab 2024-12-02
   * Slide
 
 * Database-agent
