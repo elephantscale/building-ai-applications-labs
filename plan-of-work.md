@@ -28,6 +28,6 @@
 
 * Serverless-LLM-Bedrock
   * Lab 2024-12-03
-    * But lab 5 needs module "helpers" ********************
+    * But lab 5 needs module "helpers" ******************** - do not do it!
   * Slide
 
