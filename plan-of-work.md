@@ -10,8 +10,7 @@
 
 * Functions-Tool-Agents-Langchain
   * Lab
-     * Tried to change openai to ==0.28, no help
-     * Errors ******************************************
+     * Errors in lab 4******************************************
   * Slide 2024-12-03
 
 * LLM_With_Semantic_Search
