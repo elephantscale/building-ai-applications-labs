@@ -23,7 +23,7 @@
   * Slide  2024-12-03
 
 * Prompt-engineering
-  * Lab 2024-12-02
+  * Lab 2024-12-03
   * Slide 2024-12-03
 
 * Serverless-LLM-Bedrock
