@@ -35,12 +35,7 @@
 7. **Create .env File for all API Keys**
     - We use one .env file at the root of all labs
    
-8. **Install jupyter**
-    ```sh
-    pip install jupyter
-    ```
-
-7. **Start Jupyter Lab**
+8. **Start Jupyter Lab**
    - Start Jupyter UI with the command:
      ```sh
      jupyter lab
