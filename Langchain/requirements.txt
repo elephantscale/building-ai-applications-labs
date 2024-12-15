@@ -6,3 +6,4 @@ docarray
 wikipedia
 pandas
 panel
+jupyter

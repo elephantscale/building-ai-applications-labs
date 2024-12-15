@@ -8,3 +8,4 @@ langchain-core
 langchain-experimental
 langchain-openai
 pandas
+jupyter

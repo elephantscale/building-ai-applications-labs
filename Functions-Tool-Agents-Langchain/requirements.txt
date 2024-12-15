@@ -11,3 +11,4 @@ openapi-schema-pydantic
 tiktoken
 panel
 param
+jupyter
