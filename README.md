@@ -7,3 +7,6 @@ For agencies and organizations
 
 ### Health board
 * [On GigHub](https://github.com/elephantscale/building-ai-applications-labs/issues)
+
+### For secrets transfer
+* [ty](https://1ty.me/)
