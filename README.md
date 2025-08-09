@@ -5,6 +5,9 @@ For agencies and organizations
 ### Verified 08/07/25
 
 - Prompt-engineering
+- Database Agent
+- Chat-with-your-own-data-Langchain
+- Functions-Tool-Agents-Langchain
 
 ### Health board
 
