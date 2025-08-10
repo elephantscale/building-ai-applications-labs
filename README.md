@@ -2,11 +2,12 @@
 
 For agencies and organizations
 
-### Verified 08/07/25
+### Verified 08/10/25
 
 - Prompt-engineering
 - Database Agent
 - Chat-with-your-own-data-Langchain
+- Agent-on-Bedrock(2 errors in Lab 5)
 - Functions-Tool-Agents-Langchain
 - Langchain
 
