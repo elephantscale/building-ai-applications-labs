@@ -8,6 +8,7 @@ For agencies and organizations
 - Database Agent
 - Chat-with-your-own-data-Langchain
 - Functions-Tool-Agents-Langchain
+- Langchain
 
 ### Health board
 
