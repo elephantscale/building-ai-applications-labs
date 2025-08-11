@@ -10,6 +10,7 @@ For agencies and organizations
 - Agent-on-Bedrock(2 errors in Lab 5)
 - Functions-Tool-Agents-Langchain
 - Langchain
+- Serverless-LLM-Bedrock (Labs 4 and 5 left)
 
 ### Health board
 

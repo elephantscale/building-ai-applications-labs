@@ -25,7 +25,7 @@ def lambda_handler(event, context):
         return
 
     try:
-        
+
         job_name = 'transcription-job-' + str(uuid.uuid4()) # Needs to be a unique name
 
         response = transcribe_client.start_transcription_job(
@@ -40,7 +40,7 @@ def lambda_handler(event, context):
                 'MaxSpeakerLabels': 2
             }
         )
-        
+
     except Exception as e:
         print(f"Error occurred: {e}")
         return {
