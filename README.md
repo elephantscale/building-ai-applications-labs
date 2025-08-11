@@ -7,7 +7,7 @@ For agencies and organizations
 - Prompt-engineering
 - Database Agent
 - Chat-with-your-own-data-Langchain
-- Agent-on-Bedrock(2 errors in Lab 5)
+- Agentic-on-Bedrock(2 errors in Lab 5)
 - Functions-Tool-Agents-Langchain
 - Langchain
 - Serverless-LLM-Bedrock (Labs 4 and 5 left)
