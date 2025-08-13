@@ -14,7 +14,7 @@ For agencies and organizations
 
 ### Health board
 
-- [On GigHub](https://github.com/elephantscale/building-ai-applications-labs/issues)
+- [On GitHub](https://github.com/elephantscale/building-ai-applications-labs/issues)
 
 ### For secrets transfer
 
