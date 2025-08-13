@@ -1,236 +1,267 @@
+# utils.py
+
+import json
+import warnings
+
 import umap
 import altair as alt
 
 from numba.core.errors import NumbaDeprecationWarning, NumbaPendingDeprecationWarning
-import warnings
 
-warnings.simplefilter('ignore', category=NumbaDeprecationWarning)
-warnings.simplefilter('ignore', category=NumbaPendingDeprecationWarning)
+# Silence numba warnings used by UMAP
+warnings.simplefilter("ignore", category=NumbaDeprecationWarning)
+warnings.simplefilter("ignore", category=NumbaPendingDeprecationWarning)
 
 
-def umap_plot(text, emb):
+# ---------------------------
+# Visualization helpers (UMAP)
+# ---------------------------
 
-    cols = list(text.columns)
-    # UMAP reduces the dimensions from 1024 to 2 dimensions that we can plot
+def umap_plot(text_df, emb):
+    """
+    Plot 2D UMAP for small datasets (n_neighbors=2).
+    `text_df` should be a pandas.DataFrame; `emb` is a 2D numpy array of embeddings.
+    """
+    cols = list(text_df.columns)
+
     reducer = umap.UMAP(n_neighbors=2)
     umap_embeds = reducer.fit_transform(emb)
-    # Prepare the data to plot and interactive visualization
-    # using Altair
-    #df_explore = pd.DataFrame(data={'text': qa['text']})
-    #print(df_explore)
-    
-    #df_explore = pd.DataFrame(data={'text': qa_df[0]})
-    df_explore = text.copy()
-    df_explore['x'] = umap_embeds[:,0]
-    df_explore['y'] = umap_embeds[:,1]
-    
-    # Plot
-    chart = alt.Chart(df_explore).mark_circle(size=60).encode(
-        x=#'x',
-        alt.X('x',
-            scale=alt.Scale(zero=False)
-        ),
-        y=
-        alt.Y('y',
-            scale=alt.Scale(zero=False)
-        ),
-        tooltip=cols
-        #tooltip=['text']
-    ).properties(
-        width=700,
-        height=400
+
+    df_explore = text_df.copy()
+    df_explore["x"] = umap_embeds[:, 0]
+    df_explore["y"] = umap_embeds[:, 1]
+
+    chart = (
+        alt.Chart(df_explore)
+        .mark_circle(size=60)
+        .encode(
+            x=alt.X("x", scale=alt.Scale(zero=False)),
+            y=alt.Y("y", scale=alt.Scale(zero=False)),
+            tooltip=cols,
+        )
+        .properties(width=700, height=400)
     )
     return chart
 
-def umap_plot_big(text, emb):
 
-    cols = list(text.columns)
-    # UMAP reduces the dimensions from 1024 to 2 dimensions that we can plot
+def umap_plot_big(text_df, emb):
+    """
+    Plot 2D UMAP for larger datasets (n_neighbors=100).
+    """
+    cols = list(text_df.columns)
+
     reducer = umap.UMAP(n_neighbors=100)
     umap_embeds = reducer.fit_transform(emb)
-    # Prepare the data to plot and interactive visualization
-    # using Altair
-    #df_explore = pd.DataFrame(data={'text': qa['text']})
-    #print(df_explore)
-    
-    #df_explore = pd.DataFrame(data={'text': qa_df[0]})
-    df_explore = text.copy()
-    df_explore['x'] = umap_embeds[:,0]
-    df_explore['y'] = umap_embeds[:,1]
-    
-    # Plot
-    chart = alt.Chart(df_explore).mark_circle(size=60).encode(
-        x=#'x',
-        alt.X('x',
-            scale=alt.Scale(zero=False)
-        ),
-        y=
-        alt.Y('y',
-            scale=alt.Scale(zero=False)
-        ),
-        tooltip=cols
-        #tooltip=['text']
-    ).properties(
-        width=700,
-        height=400
+
+    df_explore = text_df.copy()
+    df_explore["x"] = umap_embeds[:, 0]
+    df_explore["y"] = umap_embeds[:, 1]
+
+    chart = (
+        alt.Chart(df_explore)
+        .mark_circle(size=60)
+        .encode(
+            x=alt.X("x", scale=alt.Scale(zero=False)),
+            y=alt.Y("y", scale=alt.Scale(zero=False)),
+            tooltip=cols,
+        )
+        .properties(width=700, height=400)
     )
     return chart
 
-def umap_plot_old(sentences, emb):
-    # UMAP reduces the dimensions from 1024 to 2 dimensions that we can plot
+
+def umap_plot_old(sentences_df, emb):
+    """
+    Legacy UMAP plotter. `sentences_df` must include a 'text' column for tooltips.
+    """
     reducer = umap.UMAP(n_neighbors=2)
     umap_embeds = reducer.fit_transform(emb)
-    # Prepare the data to plot and interactive visualization
-    # using Altair
-    #df_explore = pd.DataFrame(data={'text': qa['text']})
-    #print(df_explore)
-    
-    #df_explore = pd.DataFrame(data={'text': qa_df[0]})
-    df_explore = sentences
-    df_explore['x'] = umap_embeds[:,0]
-    df_explore['y'] = umap_embeds[:,1]
-    
-    # Plot
-    chart = alt.Chart(df_explore).mark_circle(size=60).encode(
-        x=#'x',
-        alt.X('x',
-            scale=alt.Scale(zero=False)
-        ),
-        y=
-        alt.Y('y',
-            scale=alt.Scale(zero=False)
-        ),
-        tooltip=['text']
-    ).properties(
-        width=700,
-        height=400
+
+    df_explore = sentences_df.copy()
+    df_explore["x"] = umap_embeds[:, 0]
+    df_explore["y"] = umap_embeds[:, 1]
+
+    chart = (
+        alt.Chart(df_explore)
+        .mark_circle(size=60)
+        .encode(
+            x=alt.X("x", scale=alt.Scale(zero=False)),
+            y=alt.Y("y", scale=alt.Scale(zero=False)),
+            tooltip=["text"],
+        )
+        .properties(width=700, height=400)
     )
     return chart
 
 
+# ---------------------------
+# Utilities for printing
+# ---------------------------
+
 def print_result(result):
-    """ Print results with colorful formatting """
+    """Pretty-print a list of dict results."""
     for i, item in enumerate(result):
-        print(f'item {i}')
+        print(f"item {i}")
         for key in item.keys():
             print(f"{key}:{item.get(key)}")
             print()
         print()
 
 
-### Revised version
-def keyword_search(query,
-                   client,
-                   results_lang='en',
-                   properties=["title", "url", "text"],
-                   num_results=3):
-    where_filter = {
-        "path": ["lang"],
-        "operator": "Equal",
-        "valueString": results_lang
-    }
+# ---------------------------
+# Weaviate helpers
+# ---------------------------
 
-    response = (
+def _do_query(q):
+    """
+    Execute a Weaviate query and surface GraphQL errors clearly,
+    instead of failing later with KeyError: 'data'.
+    """
+    resp = q.do()
+    if "data" not in resp:
+        raise RuntimeError(f"Weaviate error: {resp.get('errors', resp)}")
+    return resp
+
+
+def _has_vectors(client, class_name="Articles"):
+    """
+    Returns True if the class has a vectorizer (i.e., not 'none'),
+    meaning dense retrieval (nearText) is possible.
+    """
+    schema = client.schema.get()
+    cls = next((c for c in schema.get("classes", []) if c.get("class") == class_name), None)
+    return bool(cls and cls.get("vectorizer") and cls.get("vectorizer") != "none")
+
+
+# ---------------------------
+# Search functions
+# ---------------------------
+
+def keyword_search(
+    query,
+    client,
+    results_lang="en",
+    properties=None,
+    num_results=3,
+):
+    """
+    BM25 keyword search against the Articles class.
+    Suitable for non-vectorized classes (vectorizer='none').
+    """
+    if properties is None:
+        # For BM25 on a non-vectorized class, _additional.distance isn't meaningful
+        properties = ["title", "url", "text", "lang", "views"]
+
+    where_filter = {"path": ["lang"], "operator": "Equal", "valueString": results_lang}
+
+    q = (
         client.query.get("Articles", properties)
-        .with_bm25(
-            query=query
-        )
+        .with_bm25(query=query)
         .with_where(where_filter)
         .with_limit(num_results)
-        .do()
     )
-
-    result = response['data']['Get']['Articles']
-    return result
-
-
-def dense_retrieval(query,
-                    client,
-                    results_lang='en',
-                    properties=["text", "title", "url", "views", "lang", "_additional {distance}"],
-                    num_results=5):
-    nearText = {"concepts": [query]}
-
-    # To filter by language
-    where_filter = {
-        "path": ["lang"],
-        "operator": "Equal",
-        "valueString": results_lang
-    }
-    response = (
-        client.query
-        .get("Articles", properties)
-        .with_near_text(nearText)
-        .with_where(where_filter)
-        .with_limit(num_results)
-        .do()
-    )
-
-    result = response['data']['Get']['Articles']
-
-    return result
+    resp = _do_query(q)
+    return resp["data"]["Get"]["Articles"]
 
 
-def search_wikipedia_subset(client, query, num_results=3, results_lang='en',
-                            properties=["text", "title", "url", "views", "lang", "_additional {distance}"]):
-    nearText = {"concepts": [query]}
+def dense_retrieval(
+    query,
+    client,
+    results_lang="en",
+    properties=None,
+    num_results=5,
+):
+    """
+    Dense (nearText) retrieval against Articles. Requires a vectorized class.
+    If your class has vectorizer='none', use keyword_search + rerank instead.
+    """
+    if properties is None:
+        properties = ["text", "title", "url", "views", "lang", "_additional {distance}"]
 
-    # To filter by language
-    if results_lang:
-        where_filter = {
-            "path": ["lang"],
-            "operator": "Equal",
-            "valueString": results_lang
-        }
-        response = (
-            client.query
-            .get("Articles", properties)
-            .with_where(where_filter)
-            .with_near_text(nearText)
-            .with_limit(5)
-            .do()
+    if not _has_vectors(client, "Articles"):
+        raise RuntimeError(
+            "Dense retrieval not possible: class 'Articles' has vectorizer='none'. "
+            "Use keyword_search(...) + rerank instead, or create a vectorized class."
         )
 
-    # Search all languages
+    where_filter = {"path": ["lang"], "operator": "Equal", "valueString": results_lang}
+
+    q = (
+        client.query.get("Articles", properties)
+        .with_near_text({"concepts": [query]})
+        .with_where(where_filter)
+        .with_limit(num_results)
+    )
+    resp = _do_query(q)
+    return resp["data"]["Get"]["Articles"]
+
+
+def search_wikipedia_subset(
+    client,
+    query,
+    num_results=3,
+    results_lang="en",
+    properties=None,
+):
+    """
+    Search the Articles class using dense retrieval if available,
+    otherwise fall back to BM25. Honors language filtering.
+    """
+    if properties is None:
+        properties = ["text", "title", "url", "views", "lang", "_additional {distance}"]
+
+    where_filter = (
+        {"path": ["lang"], "operator": "Equal", "valueString": results_lang}
+        if results_lang
+        else None
+    )
+
+    if _has_vectors(client, "Articles"):
+        q = client.query.get("Articles", properties).with_near_text({"concepts": [query]}).with_limit(num_results)
+        if where_filter:
+            q = q.with_where(where_filter)
+        resp = _do_query(q)
     else:
-        response = (
-            client.query
-            .get("Articles", properties)
-            .with_near_text(nearText)
-            .with_limit(5)
-            .do()
-        )
+        q = client.query.get("Articles", properties).with_bm25(query=query).with_limit(num_results)
+        if where_filter:
+            q = q.with_where(where_filter)
+        resp = _do_query(q)
 
-    result = response['data']['Get']['Articles']
+    return resp["data"]["Get"]["Articles"]
 
-    return result
 
+# ---------------------------
+# Generation over retrieved context
+# ---------------------------
 
 def generate_given_context(query, weav_client, co_client):
-    results = search_wikipedia_subset(weav_client, query, results_lang='en')
+    """
+    Retrieve context (prefers dense retrieval if available), then call Cohere (co_client)
+    to answer using ONLY the provided context. Returns (prediction, title, context).
+    """
+    results = search_wikipedia_subset(weav_client, query, results_lang="en", num_results=5)
+    if not results:
+        return None, None, None
 
-    title = results[0]['title']
-    context = results[0]['text']
+    title = results[0].get("title", "Unknown")
+    context = results[0].get("text", "")
 
     prompt = f"""
-    You are a useful AI trained to answer questions based on the context your are provided.
-    Use the Context Information provided below to answer the questions "{query}". If the answer to 
-    the question is in the context, extract it and print it. If it's not contained in the provided 
-    information, say "I do not know". 
-    ---
-    Context information about {title}:
-    Context: {context}
-    End of Context Information
-    ---
-    Question: {query}
-    """
+You are a helpful AI trained to answer questions from provided context.
+Use ONLY the Context Information below to answer: "{query}".
+If the answer is not in the context, say "I do not know".
 
-    # to answer from the Context Information
+---
+Context information about {title}:
+{context}
+---
+Question: {query}
+"""
+
     prediction = co_client.generate(
         prompt=prompt,
         max_tokens=50,
-        # model='command-light',
-        # temperature=0.3,
-        num_generations=5)
+        num_generations=1,
+    )
 
-    return prediction, context_title, context_text
+    return prediction, title, context
