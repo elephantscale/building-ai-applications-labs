@@ -21,3 +21,6 @@ For agencies and organizations
 ### For secrets transfer
 
 - [ty](https://1ty.me/)
+
+# For the trainer
+- _For llama4, create myenv in every lab individually_
