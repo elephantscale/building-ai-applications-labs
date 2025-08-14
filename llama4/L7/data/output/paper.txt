@@ -2079,13 +2079,13 @@ Feed-forward (l, h, df f )
 De-Embedding (h, V )
 Cross-Attention (l, hk, nheads, p, r) Attention(l, hk, nheads, p) + QKVO(l, hk × nheads, r)
 
+2
+
 flops per token/byte
 4 × l × hk × nheads × m+1
 (r × 2 + 2) × 2 × l × h2
 2 × l × 2 × h × df f h
 2 × h × |V |
-
-2
 
 Table 11 flops for operations used in transformer and BLT models. l corresponds to layers, h is the hidden dimension
 (hk with nheads heads), m is the context length, df f = 4 is the feed-forward dimension multiplier, p is the patch size,
