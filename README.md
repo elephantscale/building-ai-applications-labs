@@ -2,7 +2,7 @@
 
 For agencies and organizations
 
-### Verified 08/10/25
+### Verified 08/14/25
 
 - Prompt-engineering
 - Database Agent
@@ -12,7 +12,7 @@ For agencies and organizations
 - Langchain
 - Serverless-LLM-Bedrock (1 error in Lab 5)
 - LLM-with-Semantic-Search(1 error in Lab 4 and 2 identical errors in Lab 5)
-- llama4 (in-progress; it now has all the utility files)
+- llama4 (Labs 2,3, and 7 functional. Labs 4,5 and 6 are missing two env keys)
 
 ### Health board
 
